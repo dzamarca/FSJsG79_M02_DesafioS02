@@ -12,12 +12,16 @@
     justify-content: center;
     align-items: center;
 }
+
+/*FLEXBOX BARRA LATERAL*/
 .asideBar{
     grid-area: asideBar;
     background-color: lightgray;
     display: flex;
     flex-direction: column;
 }
+
+/*GRID PRODUCTOS*/
 .main{
     grid-area: main;
     background-color: lightgray;
@@ -31,17 +35,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 }
 
+/*GRID LAYOUT*/
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 200px 100%;
+    grid-template-rows: 40px auto 40px;
     grid-template-areas: 
     'header header'
     'asideBar main'
     'footer footer';
-    height: 100vh;
+    height: 97vh;
 
 }
 
@@ -62,14 +67,15 @@
 }
 
 
-/*MAIN CARD*/
+/*FLEXBOX TARJETAS DE PRODUCTO*/
 .card{
     display: flex;
     flex-direction: column;
     background-color: white;
     margin: 10px;
     justify-items: center; 
-    width: 300px;
+    width: 250px;
+    height: 300px;
 }
 .cardImagen{
     display: flex;
@@ -84,13 +90,15 @@
     text-align: center;
     font-size: 18px;
     font-weight: bold;  
-    flex-grow: 1;  
+    
 }
 
 .cardPrecio{
     text-align: center;
     font-size: 12px;
     padding: 10px;
+    flex-grow: 1; 
+
 }
 .card button{
     width: 100%;
@@ -99,28 +107,3 @@
     color: white;
     padding: 5px;
 }
-
-
-
-
-
-
-/* 
-
-.main{
-    grid-area: main;
-    background-color: lightgray;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between ;
-}
-
-
-
-
-
-
-
-
-
- */
